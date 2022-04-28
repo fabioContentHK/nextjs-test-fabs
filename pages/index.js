@@ -3,6 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  console.log(process.env.NEXT_PUBLIC_UNISENDER)
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -15,6 +18,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <p>xxx</p>
 
         <p className={styles.description}>
           Get started by editing{' '}
