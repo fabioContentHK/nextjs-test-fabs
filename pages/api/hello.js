@@ -6,6 +6,8 @@ export default async function handler(req, res) {
     `https://api.selzy.com/en/api/subscribe?format=json&api_key=` + process.env.NEXT_PUBLIC_UNISENDER + `&list_ids=3&fields[email]=test4@example.org&fields[Name]=John+Doe&double_optin=0&tags=RedRoseCustomer`
   )
   .then((response) => response.text())
-  .then(result => JSON.parse(result).data);
+  .then(result => {
+    res.status(200).json(result)
+  });
 
 }
